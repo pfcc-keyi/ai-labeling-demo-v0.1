@@ -27,7 +27,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000", 
         "http://localhost:5173",  # React dev servers
-        "https://*.vercel.app",   # Vercel deployment
+        "https://ai-labeling-demo-v0-1.vercel.app",   # Vercel deployment
         "https://*.netlify.app",  # Netlify deployment (backup)
     ],
     allow_credentials=True,
