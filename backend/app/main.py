@@ -27,11 +27,12 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000", 
         "http://localhost:5173",  # React dev servers
-        "https://ai-labeling-demo-v0-1.vercel.app",   # Vercel deployment
-        "https://*.netlify.app",  # Netlify deployment (backup)
+        "https://ai-labeling-demo-v0-1.vercel.app",  # 你的具体Vercel域名
+        "https://*.vercel.app",   # Vercel通配符
+        "*",  # 临时允许所有域名（用于调试）
     ],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 
